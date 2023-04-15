@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nginx-forward-proxy:
+    # build: .
+    image: dominikbechstein/nginx-forward-proxy
+    container_name: nginx-forward-proxy
+    volumes:
+      - ./nginx.conf:/usr/local/nginx/conf/nginx.conf:ro
+    ports:
+      - 8080:8080
